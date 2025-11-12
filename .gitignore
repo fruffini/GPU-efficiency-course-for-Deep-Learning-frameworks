@@ -1,1 +1,6 @@
 /.venv/
+/chapter2_data_efficiency/figures/
+/chapter2_data_efficiency/data/
+/chapter2_data_efficiency/cache_persistent/
+/chapter1_improve_the_model_performance/figures/
+/.vscode/

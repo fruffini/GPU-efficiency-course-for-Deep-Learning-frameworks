@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+"""
+Exercise 9: FLOPS and Efficiency Analysis
+Compute theoretical and achieved FLOPS, measure GPU efficiency
+"""
 
 import torch
 import time
@@ -105,7 +110,6 @@ def benchmark_flops(batch_size=2, vol_size=96, precision="fp32", iterations=20):
     x = torch.randn(batch_size, 1, vol_size, vol_size, vol_size,
                    device=device, dtype=dtype)
 
-
     # Benchmark
     torch.cuda.synchronize()
     start = time.time()
@@ -130,7 +134,6 @@ def benchmark_flops(batch_size=2, vol_size=96, precision="fp32", iterations=20):
                 "samples_per_sec": 0.0
             }
     elapsed = time.time() - start
-
 
     # Calculate FLOPS
     model_flops = estimate_model_flops(model, input_shape=(batch_size, 1, vol_size, vol_size, vol_size))

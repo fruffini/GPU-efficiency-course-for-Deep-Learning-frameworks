@@ -7,7 +7,7 @@
 gpu_slurm_medical_imaging/
 ├── chapter0_track_gpus/
 │   ├── README.md
-│   ├── 01_nvidia_smi_nvtop_basics.sh
+│   ├── 01_nvidia_smi_basics.sh
 │   ├── 02_gpu_monitoring.py
 │   ├── 03_slurm_gpu_info.sh
 │   └── 04_practical_exercises.sh
@@ -71,58 +71,33 @@ Add a reproducible Python virtual environment before running examples and script
 
 1) Linux / macOS (bash)
 ```bash
-cd /mimer/NOBACKUP/groups/naiss2023-6-336/GPU_efficiency_course
-# ALVIS python module search
-module load Python/3.12.3-GCCcore-13.3.0
-# We also import the nvtop module for later
-module load nvtop/3.2.0-GCCcore-13.3.0
-# And also load virtualenv
-module load virtualenv/20.26.2-GCCcore-13.3.0
-
-```
-2) Create and activate virtual environment
-
 # create venv
-```bash
-virtualenv --system-site-packages .venv
-# activate (im using an old env )
-source "/mimer/NOBACKUP/groups/naiss2023-6-336/AIDA_multimodal_F&C/merlin_env/bin/activate"
-# upgrade pip and install requirements if present (1 time command)
-pip install --upgrade pip'''
-```
-3) If exists, just load the modules and activate the venv
-
-```bash
-cd /mimer/NOBACKUP/groups/naiss2023-6-336/GPU_efficiency_course
-module purge
-module load Python/3.12.3-GCCcore-13.3.0
-module load nvtop/3.2.0-GCCcore-13.3.0
-module load virtualenv/20.26.2-GCCcore-13.3.0
+python3 -m venv .venv
 # activate
-source "/mimer/NOBACKUP/groups/naiss2023-6-336/AIDA_multimodal_F&C/merlin_env/bin/activate"
 source .venv/bin/activate
-# Install required packages
-pip install pynvml psutil matplotlib torch monai
+# upgrade pip and install requirements if present
+pip install --upgrade pip
 ```
 
+2) Windows (PowerShell)
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install --upgrade pip
+pip install -r requirements.txt
+```
 
-
-3) LAUNCH JOB and CONNECT
-- Use `srun` or `sbatch` to launch your scripts on SLURM with GPU requests, e.g.:
-
-- "-N": number of nodes
-- "-p": partition name (alvis)
-- "--cpus-per-task=16": number of CPU cores per task (important for data loading)
-- "--ntasks-per-node=": number of tasks per node (usually 1 task / GPU)
-- "-t": time limit
-- "--gpus-per-node": number and type of GPUs per node
-- "--pty bash": interactive bash session
-- ```bash
-  srun -A NAISS2023-5-577 -p alvis -N 1 -t 02:30:00 --cpus-per-task=16 --gpus-per-node=A40:1 --ntasks-per-node=1 --pty bash # This command requests 1 A40 GPU for an interactive bash session (it launches a terminal) -- Be careful about usage, this job can be killed for inefficiency by NAISS!
-  ```
-# For srun, the job "lives" in the termoinal -pty bash opened when you launch the command, if you dusconnect from it, the job is directly canceled!
-
-4) GPU-aware libraries
+3) GPU-aware libraries
 - For PyTorch with CUDA, prefer the official selector at https://pytorch.org to get the correct install command, for example:
   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
 - Ensure CUDA drivers on the host match the chosen CUDA runtime. If using SLURM on a cluster, check available CUDA module versions (e.g., module avail cuda) or ask sysadmin.
+
+4) Optional helper script
+- A convenience script is provided at utils/setup_venv.sh to automate creation and install requirements. Run: bash utils/setup_venv.sh
+
+## Medical Imaging Focus
+
+- **Data Format**: NIfTI, DICOM (3D volumes, not 2D images)
+- **Task Examples**: Segmentation (3D U-Net), Detection (YOLO on CT), Classification (Survival prediction)
+- **Memory Challenges**: 3D volumes can be 200MB+ per sample
+- **Practical Scenario**: Loading 10K chest CTs for training on 8GB GPU memory
