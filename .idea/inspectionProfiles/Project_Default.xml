@@ -1,0 +1,216 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="156" name="Python" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="JupyterPackageInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ourVersions">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="2.7" />
+            <item index="1" class="java.lang.String" itemvalue="3.13" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ignoredPackages">
+        <list>
+          <option value="absl-py" />
+          <option value="ansi2html" />
+          <option value="anyio" />
+          <option value="appnope" />
+          <option value="argon2-cffi" />
+          <option value="argon2-cffi-bindings" />
+          <option value="arrow" />
+          <option value="asttokens" />
+          <option value="async-lru" />
+          <option value="attrs" />
+          <option value="Babel" />
+          <option value="beautifulsoup4" />
+          <option value="bleach" />
+          <option value="blinker" />
+          <option value="cffi" />
+          <option value="chardet" />
+          <option value="click" />
+          <option value="cloudpickle" />
+          <option value="comm" />
+          <option value="contextlib2" />
+          <option value="coverage" />
+          <option value="dash" />
+          <option value="dash-bootstrap-components" />
+          <option value="dash-core-components" />
+          <option value="dash-html-components" />
+          <option value="dash-table" />
+          <option value="dash_cytoscape" />
+          <option value="dash_daq" />
+          <option value="debugpy" />
+          <option value="decorator" />
+          <option value="defusedxml" />
+          <option value="Deprecated" />
+          <option value="dnspython" />
+          <option value="docker-pycreds" />
+          <option value="et-xmlfile" />
+          <option value="executing" />
+          <option value="fastjsonschema" />
+          <option value="Flask" />
+          <option value="fqdn" />
+          <option value="ftfy" />
+          <option value="gensim" />
+          <option value="gitdb" />
+          <option value="GitPython" />
+          <option value="h11" />
+          <option value="h2" />
+          <option value="h5py" />
+          <option value="hpack" />
+          <option value="hstspreload" />
+          <option value="httpcore" />
+          <option value="httpx" />
+          <option value="humanize" />
+          <option value="hyperframe" />
+          <option value="imbalanced-learn" />
+          <option value="importlib_metadata" />
+          <option value="imutils" />
+          <option value="ipykernel" />
+          <option value="ipython" />
+          <option value="ipywidgets" />
+          <option value="isoduration" />
+          <option value="itsdangerous" />
+          <option value="jedi" />
+          <option value="json5" />
+          <option value="jsonpointer" />
+          <option value="jsonschema" />
+          <option value="jsonschema-specifications" />
+          <option value="jupyter" />
+          <option value="jupyter-console" />
+          <option value="jupyter-dash" />
+          <option value="jupyter-events" />
+          <option value="jupyter-lsp" />
+          <option value="jupyter_client" />
+          <option value="jupyter_core" />
+          <option value="jupyter_server" />
+          <option value="jupyter_server_terminals" />
+          <option value="jupyterlab" />
+          <option value="jupyterlab_pygments" />
+          <option value="jupyterlab_server" />
+          <option value="jupyterlab_widgets" />
+          <option value="markdown-it-py" />
+          <option value="matplotlib-inline" />
+          <option value="mdurl" />
+          <option value="MedCLIP" />
+          <option value="mistune" />
+          <option value="ml_collections" />
+          <option value="monai" />
+          <option value="nbclient" />
+          <option value="nbconvert" />
+          <option value="nbformat" />
+          <option value="nest-asyncio" />
+          <option value="nibabel" />
+          <option value="nltk" />
+          <option value="notebook" />
+          <option value="notebook_shim" />
+          <option value="nptyping" />
+          <option value="open-clip-torch" />
+          <option value="openpyxl" />
+          <option value="overrides" />
+          <option value="pandocfilters" />
+          <option value="parso" />
+          <option value="pexpect" />
+          <option value="platformdirs" />
+          <option value="plotly" />
+          <option value="prometheus_client" />
+          <option value="prompt-toolkit" />
+          <option value="protobuf" />
+          <option value="ptyprocess" />
+          <option value="pure-eval" />
+          <option value="pycparser" />
+          <option value="Pygments" />
+          <option value="pylibjpeg" />
+          <option value="pylibjpeg-libjpeg" />
+          <option value="pylibjpeg-openjpeg" />
+          <option value="pymongo" />
+          <option value="pynrrd" />
+          <option value="python-json-logger" />
+          <option value="pyzmq" />
+          <option value="qtconsole" />
+          <option value="QtPy" />
+          <option value="referencing" />
+          <option value="retrying" />
+          <option value="rfc3339-validator" />
+          <option value="rfc3986" />
+          <option value="rfc3986-validator" />
+          <option value="rich" />
+          <option value="rpds-py" />
+          <option value="seaborn" />
+          <option value="Send2Trash" />
+          <option value="sentencepiece" />
+          <option value="sentry-sdk" />
+          <option value="setproctitle" />
+          <option value="shellingham" />
+          <option value="SimpleITK" />
+          <option value="smart-open" />
+          <option value="smmap" />
+          <option value="sniffio" />
+          <option value="soupsieve" />
+          <option value="stack-data" />
+          <option value="submitit" />
+          <option value="tenacity" />
+          <option value="terminado" />
+          <option value="textaugment" />
+          <option value="textblob" />
+          <option value="tinycss2" />
+          <option value="toolz" />
+          <option value="torchio" />
+          <option value="torchxrayvision" />
+          <option value="tornado" />
+          <option value="traitlets" />
+          <option value="typer" />
+          <option value="types-python-dateutil" />
+          <option value="uri-template" />
+          <option value="wandb" />
+          <option value="wcwidth" />
+          <option value="webcolors" />
+          <option value="webencodings" />
+          <option value="websocket-client" />
+          <option value="Werkzeug" />
+          <option value="wget" />
+          <option value="widgetsnbextension" />
+          <option value="wrapt" />
+          <option value="zipp" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E303" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N802" />
+          <option value="N806" />
+          <option value="N803" />
+          <option value="N801" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnboundLocalVariableInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="transformers.PaliGemmaForConditionalGeneration" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyVulnerableApiCodeInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+  </profile>
+</component>
